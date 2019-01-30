@@ -1,0 +1,6 @@
+framework module PQNetworking {
+  umbrella header "PQNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

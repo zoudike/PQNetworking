@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F3B1E04D25449CF0FB923FE /* Pods_PQNetworking_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79240324F6538CA986E9EA17 /* Pods_PQNetworking_Example.framework */; };
+		1FD8D21D29290803B35EF63B /* libPods-PQNetworking_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4502408F91AEF71E6D38F4C /* libPods-PQNetworking_Example.a */; };
+		237326693C588F1A31DCF067 /* libPods-PQNetworking_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C71E6B5DE7E2E99680F385D /* libPods-PQNetworking_Tests.a */; };
+		5D214BF4220001B50068AB33 /* PQxxxService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D214BF3220001B50068AB33 /* PQxxxService.m */; };
+		5D214BF722003C110068AB33 /* PQServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D214BF622003C110068AB33 /* PQServiceFactory.m */; };
+		5D214BFB220040910068AB33 /* Target_netService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D214BFA220040910068AB33 /* Target_netService.m */; };
+		5D6BB4FA21FEF2B200C700A4 /* PQApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6BB4F921FEF2B200C700A4 /* PQApiManager.m */; };
+		5D6BB50121FEF92F00C700A4 /* PQURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6BB50021FEF92F00C700A4 /* PQURLResponse.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,7 +29,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		945A5B24178353594B852BED /* Pods_PQNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AA994A224509896176BC00 /* Pods_PQNetworking_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,20 @@
 
 /* Begin PBXFileReference section */
 		099206FD9BE7212DDE64F9AC /* Pods-PQNetworking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PQNetworking_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PQNetworking_Example/Pods-PQNetworking_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2C71E6B5DE7E2E99680F385D /* libPods-PQNetworking_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PQNetworking_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D214BF121FFFE0C0068AB33 /* PQNetServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQNetServiceProtocol.h; sourceTree = "<group>"; };
+		5D214BF2220001B50068AB33 /* PQxxxService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQxxxService.h; sourceTree = "<group>"; };
+		5D214BF3220001B50068AB33 /* PQxxxService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PQxxxService.m; sourceTree = "<group>"; };
+		5D214BF522003C110068AB33 /* PQServiceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQServiceFactory.h; sourceTree = "<group>"; };
+		5D214BF622003C110068AB33 /* PQServiceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PQServiceFactory.m; sourceTree = "<group>"; };
+		5D214BF9220040910068AB33 /* Target_netService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_netService.h; sourceTree = "<group>"; };
+		5D214BFA220040910068AB33 /* Target_netService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_netService.m; sourceTree = "<group>"; };
+		5D214BFC220140BB0068AB33 /* PQServiceName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQServiceName.h; sourceTree = "<group>"; };
+		5D214BFD2201449F0068AB33 /* PQRequestDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQRequestDefine.h; sourceTree = "<group>"; };
+		5D6BB4F821FEF2B200C700A4 /* PQApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQApiManager.h; sourceTree = "<group>"; };
+		5D6BB4F921FEF2B200C700A4 /* PQApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PQApiManager.m; sourceTree = "<group>"; };
+		5D6BB4FF21FEF92F00C700A4 /* PQURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PQURLResponse.h; sourceTree = "<group>"; };
+		5D6BB50021FEF92F00C700A4 /* PQURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PQURLResponse.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PQNetworking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PQNetworking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,14 +78,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6E191A512B9BDD9067FE9700 /* Pods-PQNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PQNetworking_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PQNetworking_Tests/Pods-PQNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79240324F6538CA986E9EA17 /* Pods_PQNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PQNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8748840C13815864746F98C7 /* Pods-PQNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PQNetworking_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PQNetworking_Example/Pods-PQNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B096DEB2232BB0F6F2EAEB26 /* Pods-PQNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PQNetworking_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PQNetworking_Tests/Pods-PQNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B8AA994A224509896176BC00 /* Pods_PQNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PQNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5E5A928818858E3144DB439 /* PQNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PQNetworking.podspec; path = ../PQNetworking.podspec; sourceTree = "<group>"; };
-		D187A93A2D15B14FBB1DE51C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		DA188B8CBA7BE860B07545E5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C5E5A928818858E3144DB439 /* PQNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PQNetworking.podspec; path = ../PQNetworking.podspec; sourceTree = "<group>"; };
+		D187A93A2D15B14FBB1DE51C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D4502408F91AEF71E6D38F4C /* libPods-PQNetworking_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PQNetworking_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA188B8CBA7BE860B07545E5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +95,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				2F3B1E04D25449CF0FB923FE /* Pods_PQNetworking_Example.framework in Frameworks */,
+				1FD8D21D29290803B35EF63B /* libPods-PQNetworking_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +106,41 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				945A5B24178353594B852BED /* Pods_PQNetworking_Tests.framework in Frameworks */,
+				237326693C588F1A31DCF067 /* libPods-PQNetworking_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D214BF8220040110068AB33 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				5D214BF522003C110068AB33 /* PQServiceFactory.h */,
+				5D214BF622003C110068AB33 /* PQServiceFactory.m */,
+				5D214BF9220040910068AB33 /* Target_netService.h */,
+				5D214BFA220040910068AB33 /* Target_netService.m */,
+				5D214BFC220140BB0068AB33 /* PQServiceName.h */,
+				5D214BFD2201449F0068AB33 /* PQRequestDefine.h */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		5D6BB4FB21FEF87E00C700A4 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				5D214BF8220040110068AB33 /* service */,
+				5D6BB4F821FEF2B200C700A4 /* PQApiManager.h */,
+				5D6BB4F921FEF2B200C700A4 /* PQApiManager.m */,
+				5D6BB4FF21FEF92F00C700A4 /* PQURLResponse.h */,
+				5D6BB50021FEF92F00C700A4 /* PQURLResponse.m */,
+				5D214BF121FFFE0C0068AB33 /* PQNetServiceProtocol.h */,
+				5D214BF2220001B50068AB33 /* PQxxxService.h */,
+				5D214BF3220001B50068AB33 /* PQxxxService.m */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +169,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				79240324F6538CA986E9EA17 /* Pods_PQNetworking_Example.framework */,
-				B8AA994A224509896176BC00 /* Pods_PQNetworking_Tests.framework */,
+				D4502408F91AEF71E6D38F4C /* libPods-PQNetworking_Example.a */,
+				2C71E6B5DE7E2E99680F385D /* libPods-PQNetworking_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +178,7 @@
 		6003F593195388D20070C39A /* Example for PQNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				5D6BB4FB21FEF87E00C700A4 /* manager */,
 				6003F59C195388D20070C39A /* PQAppDelegate.h */,
 				6003F59D195388D20070C39A /* PQAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -207,7 +254,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				4E23D8BD240DFE1D7A62BF10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +293,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zoudike;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = Y2GT48CSN8;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -294,42 +343,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E23D8BD240DFE1D7A62BF10 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PQNetworking_Example/Pods-PQNetworking_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PQNetworking/PQNetworking.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PQNetworking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PQNetworking_Example/Pods-PQNetworking_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		66082C5E9604E011690E5F52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PQNetworking_Example-checkManifestLockResult.txt",
 			);
@@ -343,15 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PQNetworking_Tests-checkManifestLockResult.txt",
 			);
@@ -367,9 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D214BFB220040910068AB33 /* Target_netService.m in Sources */,
 				6003F59E195388D20070C39A /* PQAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PQViewController.m in Sources */,
+				5D214BF4220001B50068AB33 /* PQxxxService.m in Sources */,
+				5D6BB50121FEF92F00C700A4 /* PQURLResponse.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				5D6BB4FA21FEF2B200C700A4 /* PQApiManager.m in Sources */,
+				5D214BF722003C110068AB33 /* PQServiceFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +521,7 @@
 			baseConfigurationReference = 099206FD9BE7212DDE64F9AC /* Pods-PQNetworking_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y2GT48CSN8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PQNetworking/PQNetworking-Prefix.pch";
 				INFOPLIST_FILE = "PQNetworking/PQNetworking-Info.plist";
@@ -512,6 +537,7 @@
 			baseConfigurationReference = 8748840C13815864746F98C7 /* Pods-PQNetworking_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y2GT48CSN8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PQNetworking/PQNetworking-Prefix.pch";
 				INFOPLIST_FILE = "PQNetworking/PQNetworking-Info.plist";
