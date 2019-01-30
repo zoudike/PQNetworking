@@ -15,7 +15,7 @@
 
 - (NSURLRequest *)requestWithBaseUrl:(NSString *)baseUrl
                           requestUrl:(NSString *)requestUrl
-                              Params:(NSDictionary *)params
+                              params:(NSDictionary *)params
                          requestType:(PQRequstMethod)method;
 
 - (PQURLResponse *)resultWithResponseObject:(id)responseObject

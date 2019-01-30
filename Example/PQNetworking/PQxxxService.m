@@ -8,6 +8,7 @@
 
 #import "PQxxxService.h"
 #import <AFNetworking/AFNetworking.h>
+#import "PQRequestDefine.h"
 
 @interface PQxxxService ()
 
@@ -21,26 +22,28 @@
 
 #pragma mark -- imp protocol
 
-- (NSURLRequest *)requestWithParams:(NSDictionary *)params requestType:(PQURLRequestMethod)method {
+- (NSURLRequest *)requestWithBaseUrl:(NSString *)baseUrl requestUrl:(NSString *)requestUrl params:(NSDictionary *)params requestType:(PQRequstMethod)method {
     NSString *methodStr = @"GET";
     switch (method) {
-        case PQURLRequestMethodGet:
+        case PQRequstMethodGET:
             methodStr = @"GET";
             break;
-        case PQURLRequestMethodPost:
+        case PQRequstMethodPOST:
             methodStr = @"POST";
             break;
-        case PQURLRequestMethodPut:
+        case PQRequstMethodPUT:
             methodStr = @"PUT";
             break;
-        case PQURLRequestMethodDelete:
+        case PQRequstMethodDELETE:
             methodStr = @"DELETE";
             break;
         default:
             break;
     }
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methodStr URLString:[NSString stringWithFormat:@"%@%@",self.] parameters:<#(nullable id)#> error:<#(NSError *__autoreleasing  _Nullable * _Nullable)#>];
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methodStr URLString:[NSString stringWithFormat:@"%@%@",baseUrl,requestUrl] parameters:params error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methodStr
+                                    URLString:[NSString stringWithFormat:@"%@%@",baseUrl,requestUrl]
+                                   parameters:params
+                                        error:nil];
     return request;
 }
 

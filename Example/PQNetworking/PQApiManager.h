@@ -33,4 +33,6 @@ typedef void(^managerDidFail)(PQURLResponse *response);
 
 - (void)executWithSuccess:(managerDidSuccess)success failure:(managerDidFail)failure;
 
+- (void)executWithParams:(NSDictionary *)params success:(managerDidSuccess)success failure:(managerDidFail)failure;
+
 @end

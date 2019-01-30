@@ -47,13 +47,18 @@
 #pragma mark -- execut执行方法
 
 - (void)executWithSuccess:(managerDidSuccess)success failure:(managerDidFail)failure {
+    [self executWithParams:self.bodyDict success:success failure:failure];
+}
+
+- (void)executWithParams:(NSDictionary *)params success:(managerDidSuccess)success failure:(managerDidFail)failure {
     id<PQNetServiceProtocol> service = [[PQServiceFactory sharedInstance] createServiceWithInderfiler:self.serviceIdentifier];
-    NSURLRequest *request = [service requestWithBaseUrl:self.baseService requestUrl:self.requstUrl Params:self.bodyDict requestType:self.requstMethod];
+    NSURLRequest *request = [service requestWithBaseUrl:self.baseService requestUrl:self.requstUrl params:params requestType:self.requstMethod];
     AFHTTPSessionManager *sessionManager = [self seesionManagerWithService:service];
     NSURLSessionDataTask *task =
     [sessionManager dataTaskWithRequest:request
                          uploadProgress:nil
-                       downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
+                       downloadProgress:nil
+                      completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
      {
         //数据处理，交给实现service接口的实例
          PQURLResponse *pq_response = [service resultWithResponseObject:responseObject response:response request:request error:&error];

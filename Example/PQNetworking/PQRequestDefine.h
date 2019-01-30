@@ -9,11 +9,18 @@
 #ifndef PQRequestDefine_h
 #define PQRequestDefine_h
 
-typedef NS_ENUM(NSInteger,PQRequstMethod) {
+typedef NS_ENUM(NSInteger, PQRequstMethod) {
     PQRequstMethodGET,
     PQRequstMethodPOST,
     PQRequstMethodPUT,
     PQRequstMethodDELETE,
+};
+
+typedef NS_ENUM(NSInteger, PQResponseStatus) {
+    PQResponseStatusSuccess,
+    PQResponseStatusTimeout,
+    PQResponseStatusCancel,
+    PQResponseStatusNotNet,
 };
 
 #endif /* PQRequestDefine_h */
