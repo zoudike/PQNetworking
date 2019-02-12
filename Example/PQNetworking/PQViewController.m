@@ -7,12 +7,21 @@
 //
 
 #import "PQViewController.h"
+#import "PQDemoApiManager.h"
 
 @interface PQViewController ()
 
 @end
 
 @implementation PQViewController
+
+- (IBAction)netRequestClick:(id)sender {
+    [[[PQDemoApiManager alloc] init] executWithSuccess:^(PQURLResponse *response) {
+        NSLog(@"");
+    } failure:^(PQURLResponse *response) {
+        NSLog(@"");
+    }];
+}
 
 - (void)viewDidLoad
 {
@@ -25,10 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)test {
-   
-}
-
 
 @end

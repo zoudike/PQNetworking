@@ -26,13 +26,14 @@ typedef void(^managerDidFail)(PQURLResponse *response);
 //以下属性在是api请求的参数信息,不同的api可以以子类的形式重写set方法
 @property (nonatomic, copy, readonly) NSString *baseService;//服务域名
 @property (nonatomic, copy, readonly) NSString *requstUrl;//请求地址
-@property (nonatomic, copy, readonly) NSString *serviceIdentifier;//服务接口的唯一标识
 @property (nonatomic, copy, readonly) NSDictionary *headerDict;//请求头
 @property (nonatomic, copy, readonly) NSDictionary *bodyDict;//请求体
 @property (nonatomic, assign, readonly) PQRequstMethod requstMethod;//默认是get方法
+@property (nonatomic, assign, readonly) NSTimeInterval requestTimeoutInterval;//请求超时时间,默认为30s
+@property (nonatomic, assign, readonly) BOOL allowsCellularAccess;//是否允许蜂窝网络,默认为yes
 
 - (void)executWithSuccess:(managerDidSuccess)success failure:(managerDidFail)failure;
 
-- (void)executWithParams:(NSDictionary *)params success:(managerDidSuccess)success failure:(managerDidFail)failure;
+- (void)executWithExtendBody:(NSDictionary *)body extendHeader:(NSDictionary *)header success:(managerDidSuccess)success failure:(managerDidFail)failure;
 
 @end

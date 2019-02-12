@@ -20,7 +20,6 @@ PODS:
     - CTMediator
 
 DEPENDENCIES:
-  - CTMediator
   - PQNetworking (from `../`)
 
 SPEC REPOS:
@@ -37,6 +36,6 @@ SPEC CHECKSUMS:
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   PQNetworking: 58a3f493c5c0aa17938cd4ea419de6f806dad88f
 
-PODFILE CHECKSUM: 2ee016d5d71371efb1e405892c987e0ed8af8e01
+PODFILE CHECKSUM: dd5f67d8b678979c478c0d0c1c73f75e368addc2
 
 COCOAPODS: 1.5.3

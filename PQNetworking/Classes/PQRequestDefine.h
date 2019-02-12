@@ -17,10 +17,10 @@ typedef NS_ENUM(NSInteger, PQRequstMethod) {
 };
 
 typedef NS_ENUM(NSInteger, PQResponseStatus) {
-    PQResponseStatusSuccess,
-    PQResponseStatusTimeout,
-    PQResponseStatusCancel,
-    PQResponseStatusNotNet,
+    PQResponseStatusSuccess,    //请求成功
+    PQResponseStatusTimeout,    //请求超时
+    PQResponseStatusCancel,     //请求取消
+    PQResponseStatusNotNet,     //无网络
 };
 
 #endif /* PQRequestDefine_h */
