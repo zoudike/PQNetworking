@@ -9,13 +9,22 @@
 #import "PQApiManager.h"
 #import <AFNetworking/AFNetworking.h>
 
-@interface PQApiManager()
+@interface PQApiManager()<PQNetResponseFilter>
 
 @property (nonatomic, strong) AFHTTPRequestSerializer * requestSerializer;
 
 @end
 
 @implementation PQApiManager
+
+- (instancetype)init {
+    if (self = [super init]) {
+        self.filter = self;
+    }
+    return self;
+}
+
+#pragma mark -- PQNetResponseFilter
 
 #pragma mark -- 用于子类重写的set方法，根据不同的请求重写各个属性
 - (NSString *)baseService {
@@ -77,10 +86,18 @@
                        downloadProgress:nil
                       completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
      {
-         PQURLResponse *pq_response = [[PQURLResponse alloc] initWithResponseObj:responseObject
-                                                                        response:response
-                                                                         request:request
-                                                                           error:error];
+         PQURLResponse *pq_response;
+         if (self.filter && [self.filter respondsToSelector:@selector(filteWithResponse:responseObj:request:error:)]) {
+              pq_response = [self.filter filteWithResponse:response
+                                                             responseObj:responseObject
+                                                                 request:request
+                                                                   error:error];
+         } else {
+             pq_response = [[PQURLResponse alloc] initWithResponseObj:responseObject
+                                                             response:response
+                                                              request:request
+                                                                error:error];
+         }
          if (error) {
              failure ? failure(pq_response) : nil;
          } else {
