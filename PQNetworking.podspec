@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PQNetworking'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of PQNetworking.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/zoudike/PQNetworking'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zoudike' => 'peiqi.wen@broadlink.com.cn' }
+  s.author           = { 'zoudike' => '850592231@qq.com' }
   s.source           = { :git => 'https://github.com/zoudike/PQNetworking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

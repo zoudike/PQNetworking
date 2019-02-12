@@ -18,7 +18,6 @@ typedef void(^managerDidFail)(PQURLResponse *response);
 
 /*
  *  该类及其子类是用于存储api请求信息，以及提供api发起入口
- *  请求参数的拼接和数据处理交给serviceIdentifier对应的service，service的生成是通过PQServiceFactory工厂类
  *  
  */
 @interface PQApiManager : NSObject

@@ -16,6 +16,7 @@
 @implementation PQViewController
 
 - (IBAction)netRequestClick:(id)sender {
+    //实际开发中可以放到viewmodel中进行处理
     [[[PQDemoApiManager alloc] init] executWithSuccess:^(PQURLResponse *response) {
         NSLog(@"");
     } failure:^(PQURLResponse *response) {
